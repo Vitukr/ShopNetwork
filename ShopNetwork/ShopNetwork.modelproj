@@ -22,9 +22,43 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="UMLClassDiagramShopNetwork.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagramShopNetwork.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagramShopNetwork.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLComponentDiagramShop.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLComponentDiagramShop.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLComponentDiagramShop.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagramShopping.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagramShopping.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagramShopping.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ShopNetwork.uml">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagramShop.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagramShop.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagramShop.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagramShop.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagramShop.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>

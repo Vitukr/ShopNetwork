@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="ProjectPath = ..\ShopNetworkLib\ShopNetworkLib.csproj" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:10" Importance="Medium" Text="ShopNetwork's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'ShopNetwork::PromProduct' -  (Class), 'ShopNetwork::Product' -  (Class), 'ShopNetwork::ProdProduct' -  (Class), 'ShopNetwork::Buyer' -  (Class), 'ShopNetwork::Seller' -  (Class), 'ShopNetwork::Card' -  (Class) " />
+  <Message Timestamp="2017-12-24T15:02:11" Importance="Medium" Text="Project Added: c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\ShopNetworkLib.csproj" />
+  <Message Timestamp="2017-12-24T15:02:11" Importance="Medium" Text="'ShopNetwork::PromProduct' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\PromProduct.cs" />
+  <Message Timestamp="2017-12-24T15:02:11" Importance="Medium" Text="'ShopNetwork::Product' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\Product.cs" />
+  <Message Timestamp="2017-12-24T15:02:11" Importance="Medium" Text="'ShopNetwork::ProdProduct' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\ProdProduct.cs" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="'ShopNetwork::Buyer' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\Buyer.cs" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="'ShopNetwork::Seller' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\Seller.cs" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="'ShopNetwork::Card' -  (Class) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\Card.cs" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="ProjectPath = ..\ShopNetworkLib\ShopNetworkLib.csproj" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="ShopNetwork's Text Template Binding: 'InterfaceTemplate' will apply InterfaceTemplate.t4 to: 'ShopNetwork::CardHolder' -  (Interface) " />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="'ShopNetwork::CardHolder' -  (Interface) : success (file replaced) - c:\users\vit\documents\visual studio 2015\Projects\ShopNetwork\ShopNetworkLib\GeneratedCode\CardHolder.cs" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="ProjectPath = ..\ShopNetworkLib\ShopNetworkLib.csproj" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Medium" Text="ShopNetwork's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'ShopNetwork::PromProduct' -  (Class), 'ShopNetwork::Product' -  (Class), 'ShopNetwork::ProdProduct' -  (Class), 'ShopNetwork::Buyer' -  (Class), 'ShopNetwork::Seller' -  (Class), 'ShopNetwork::Card' -  (Class) " />
+  <Message Timestamp="2017-12-24T15:02:12" Importance="Diagnostic" Text="'ShopNetwork::PromProduct' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::Product' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::ProdProduct' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::Buyer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::Seller' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::Card' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="The selection included 7 elements which were not bound to a template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'2119e829-8a48-472c-954f-9b0bb9268459' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'404828fa-b631-419f-a574-f42de71abfa7' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::' -  (Association): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::' -  (Association): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::' -  (Association): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="Diagnostic" Text="'ShopNetwork::' -  (Association): no bound template." />
+  <Message Timestamp="2017-12-24T15:02:13" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
