@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="d6a963dc-8903-40cf-a6e7-572f863f08a8" name="ActivityShop" linkedPackageId="1514ad05-d58d-478c-80d7-4e77e92ec0bf" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="f98ff3b4-e052-4fee-8941-53fbbd1204dd" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d2581727-61a7-4722-b6b9-7437457cf5d3" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="115c334e-10b5-406d-8591-1d95e208dc85">
+          <propertyInstance Id="af6264f4-0d4e-4447-8894-f12133303164" name="BaseName">
+            <elementDefinition Id="ae556637-d236-4184-82ad-98b7fa213e92" />
+          </propertyInstance>
+          <elementDefinition Id="ba541de1-f829-453c-b435-c6ad7fdc82fd" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="dc0d13f3-662b-49c8-941c-bd2f48b43dc0">
+          <propertyInstance Id="84c78ec1-7cbb-41c2-9287-9c576b554104" name="ClrAttributes">
+            <elementDefinition Id="41ebd6ac-90f8-4d92-aab1-6aaa5f71fe68" />
+          </propertyInstance>
+          <elementDefinition Id="80e44a4c-bebc-490b-8913-4162e6f48728" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="4abc2c65-07cf-4261-b443-b977eec2b00a">
+          <propertyInstance Id="152c3f71-bad4-486f-913c-d07190c4f871" name="Usings">
+            <elementDefinition Id="c7892dfe-9290-4610-8e42-0132cf08f841" />
+          </propertyInstance>
+          <elementDefinition Id="5d93636f-5237-4f3c-a6c6-4891a129dfed" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="9a0a26e4-cae5-4f9d-b8cb-fbdd18a2eaba" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="f28022c7-0a5e-466e-bbec-355b8a952e62" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="85258aec-00f9-4390-b6e9-f8cffb81e127">
+          <propertyInstance Id="0511f3e4-a697-4eff-8c1c-9133711b3622" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="eaefd5c6-4ecc-4266-acdd-be675d7e17a2" />
+          </propertyInstance>
+          <elementDefinition Id="2e837f44-308e-4da6-995e-3bf2b2158aa9" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f5fe20f7-81df-4cb9-8a8f-aa27d15ac970">
+          <propertyInstance Id="62d96417-ee8a-43af-8284-e228311ec0dc" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="75fb9a80-c6a6-419e-84a4-72a444b811b6" />
+          </propertyInstance>
+          <elementDefinition Id="648f399a-001e-4678-829b-6ea6a5943491" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a61f4329-4a8c-4e98-9d4c-4f2c75cac7a8">
+          <propertyInstance Id="b9ef7037-6dbe-4938-8c20-21a5df9329b2" name="ProjectPath" value="ClassTemplate=..\ShopNetworkLib\ShopNetworkLib.csproj|EnumTemplate=..\ShopNetworkLib\ShopNetworkLib.csproj|InterfaceTemplate=..\ShopNetworkLib\ShopNetworkLib.csproj|StructTemplate=..\ShopNetworkLib\ShopNetworkLib.csproj">
+            <elementDefinition Id="8769bdb7-a95b-443e-8862-9b28da84ecae" />
+          </propertyInstance>
+          <elementDefinition Id="13c988dc-844a-4c00-9455-d9855504430b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="08e03ede-b026-4c5b-9d6f-fa563946365f">
+          <propertyInstance Id="5757cd2c-6527-4f79-b058-798304bf9d29" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="eeee331f-393b-441e-8f15-15ef378de7e9" />
+          </propertyInstance>
+          <elementDefinition Id="bf4a4677-0d9a-424e-add2-feef00d7c2ec" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="4159079e-a655-4d67-b406-b8b5667c6cf1">
+          <propertyInstance Id="6ba7f870-7583-47d8-a909-9eb2a97a3444" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="d4ab9690-14f7-406f-bb88-6d3a70a000e7" />
+          </propertyInstance>
+          <elementDefinition Id="4462fbca-2802-443d-9a58-994c756b7975" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="05415c95-f9b9-4008-af74-ce382d74786f">
+          <propertyInstance Id="a31065ff-1fb5-4fac-8cbb-f52ca3d0ed68" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="013423af-694c-47b3-9407-9b97498e5fa4" />
+          </propertyInstance>
+          <elementDefinition Id="c3843880-0fe8-4191-b6ba-0bb912b262f3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f04a6227-ea0a-4959-be0c-f3a285a8c279">
+          <propertyInstance Id="51d40045-8224-4fbc-a894-0ad04b1a2aee" name="Parameters">
+            <elementDefinition Id="8e4e2998-959c-418a-8eb8-3e9389b38398" />
+          </propertyInstance>
+          <elementDefinition Id="8add7e24-73fb-441a-bf66-419b74f696f8" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="fb493abe-7f74-4403-9da6-ba4520f958db">
+      <profileInstance Id="c9ea1917-8308-4b76-9638-218e93ffb406" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="83f502b3-8348-405d-b333-9106e1c8af73">
+      <profileInstance Id="bde8784b-6d47-494a-aabd-0ee9a0fcb0cc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ed1f9283-a6f3-4388-95b1-d488291dd604">
+      <profileInstance Id="ff02d6f6-82e1-403d-8f4f-e31f47251bc3" name="CSharpProfile">
+        <elementDefinition Id="06d3615f-f652-475d-ac36-eff5eb7245e4" />
+      </profileInstance>
+      <elementDefinition Id="f0612396-31d9-472e-bcc7-9dd8efa1a9fb" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="73bdab7f-c898-4708-a2dc-45d474617038">
+      <profileInstance Id="89b15725-73cf-4dcc-9550-567ceff75c58" name="TextTemplateBindings">
+        <elementDefinition Id="83fdd642-e1cc-40ed-89b5-0cbe4ece0d82" />
+      </profileInstance>
+      <elementDefinition Id="baf808d6-1288-4386-9913-f2232c57ab91" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="66c9a526-a28b-4b29-9e97-15bacc56cb99" name="ActivityShop" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="fcbf4840-3ae9-416f-889f-34d8e5bb1e20" />
+        <nodes>
+          <initialNode Id="b58abc1d-8286-46b8-b219-6bb65639475c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="927b8079-d962-40f6-8632-d993dffa0eb8" />
+            <flowNodeTargets>
+              <controlFlow Id="d1cb1544-4e6f-488e-8468-2f55c2e0cc6d" isLeaf="false">
+                <opaqueActionMoniker Id="821c03c3-5a8a-47f0-844d-f0e50fc50384" LastKnownName="Buyer takes products" />
+                <elementDefinition Id="dba161de-ef46-47f4-a0d6-207fe6d78d29" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="821c03c3-5a8a-47f0-844d-f0e50fc50384" name="Buyer takes products" isLeaf="false">
+            <elementDefinition Id="7f6b685f-a56f-4030-a05f-8fe3e22603df" />
+            <objectFlowTargets>
+              <objectFlow Id="3fedaebd-f03d-4fc6-aa54-b707a4ede339" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="b1f4133f-f3b2-41a9-8fe1-0cbca011520c" LastKnownName="Products" />
+                <elementDefinition Id="4cf5defe-7895-43f3-aadf-793c4efa715e" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="b1f4133f-f3b2-41a9-8fe1-0cbca011520c" name="Products" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="57a1fe0d-f190-43f5-a93b-f7f52bc6ffbe" />
+            <objectFlowTargets>
+              <objectFlow Id="d139615e-b6df-4ab5-b9ab-150c664849fc" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="439a4e86-1553-4ff5-809e-5d3e47a5a088" LastKnownName="Buyer" />
+                <elementDefinition Id="31b3d654-9f9b-4962-9324-c40e0b636843" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="275c29a2-94f2-4d58-9120-1a299a68e13e" name="2147483647" value="2147483647">
+                <elementDefinition Id="b6069a1d-4e89-4daf-aa5c-535e56a5bcf8" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="439a4e86-1553-4ff5-809e-5d3e47a5a088" name="Buyer" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="5ac3c613-072f-4187-ad6c-8077389554da" />
+            <objectFlowTargets>
+              <objectFlow Id="de34ec5b-a1a5-4760-9f1e-73580ed64eac" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="991bf1be-7357-454a-bfc7-48c9e051b6d4" LastKnownName="Decision1" />
+                <elementDefinition Id="d040df62-747e-409c-9e24-59c00cf4bfdd" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="8288c2c1-e819-4824-887b-9ca01e0cb641" name="2147483647" value="2147483647">
+                <elementDefinition Id="dc7abdfe-164e-4542-8b8e-a75aff30399a" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <decisionNode Id="991bf1be-7357-454a-bfc7-48c9e051b6d4" name="Decision1" isLeaf="false">
+            <elementDefinition Id="743e2a49-e418-4bbb-8bf7-1c114a08f9cd" />
+            <objectFlowTargets>
+              <objectFlow Id="e5624641-7810-4af2-aea9-c1606088f346" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="8594015f-aa29-4051-b0b2-f8be03b1e7fd" LastKnownName="Buyer has card" />
+                <elementDefinition Id="fff00872-7eeb-4dc4-bf1f-d31b01844d5b" />
+              </objectFlow>
+              <objectFlow Id="6caf213c-867c-4ed1-95c9-2f1f29201f19" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="daf8dbf0-367d-4948-a760-b4ed15e55859" LastKnownName="No card" />
+                <elementDefinition Id="566d12f4-a1df-4cbe-9418-97f48a04700a" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <objectNode Id="e6ddc119-7b58-4a21-bd7b-4c116e5644f4" name="Seller" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="5b623fdb-44df-4451-8893-fbc11eeb2088" />
+            <objectFlowTargets>
+              <objectFlow Id="b8e0ebff-7a2e-41d3-afb9-6769063808db" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="5f1aadb9-7653-49e5-93c0-1f25252c8551" LastKnownName="Sell with card price" />
+                <elementDefinition Id="1c5bec69-fd7b-4844-a68f-c9d2d1838b14" />
+              </objectFlow>
+              <objectFlow Id="102313d9-629d-40c8-b6db-a82b15eeaf72" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="c943d7d5-929f-4a5a-877e-6ea108eb53a7" LastKnownName="Sell with price" />
+                <elementDefinition Id="3ca056c9-0bf7-45e2-b7d0-425f97737d5a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="4121ad07-3a8b-45f1-8507-19be9da3766d" name="2147483647" value="2147483647">
+                <elementDefinition Id="de21fee0-fb6a-4ab4-9cec-07e178f4318e" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="5f1aadb9-7653-49e5-93c0-1f25252c8551" name="Sell with card price" isLeaf="false">
+            <elementDefinition Id="d7fa2a24-1a9b-421d-b29d-94db0069ae47" />
+            <flowNodeTargets>
+              <controlFlow Id="aa80a569-39a4-4cee-b934-25779b838079" isLeaf="false">
+                <activityFinalNodeMoniker Id="ba3796cb-c79d-4210-b2b5-c6e6ceeb0672" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="5388c50a-ab9c-47cf-b717-7c1b5e223a64" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c943d7d5-929f-4a5a-877e-6ea108eb53a7" name="Sell with price" isLeaf="false">
+            <elementDefinition Id="bccfa0a1-50d3-4575-b416-7179d6b08e73" />
+            <flowNodeTargets>
+              <controlFlow Id="2a5839a1-3ba1-4ea1-b355-4901c670a57b" isLeaf="false">
+                <activityFinalNodeMoniker Id="ba3796cb-c79d-4210-b2b5-c6e6ceeb0672" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ddb38380-4a41-4989-b820-cfa912334c91" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="ba3796cb-c79d-4210-b2b5-c6e6ceeb0672" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="ab628d26-a243-480d-a025-ada7d90faa99" />
+          </activityFinalNode>
+          <objectNode Id="8594015f-aa29-4051-b0b2-f8be03b1e7fd" name="Buyer has card" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7e371385-2c1a-4c78-aea1-9d9ab3838e59" />
+            <objectFlowTargets>
+              <objectFlow Id="6653aa79-913a-47b7-ae53-1bce8463c758" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="5f1aadb9-7653-49e5-93c0-1f25252c8551" LastKnownName="Sell with card price" />
+                <elementDefinition Id="cfd21671-d30c-4032-9151-6f994f418d6f" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="2de46c9e-bd5a-4a24-92f6-2af3e665c548" name="2147483647" value="2147483647">
+                <elementDefinition Id="1b1cbd20-59d1-4aaa-bcf2-db7e6b7ccc86" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="daf8dbf0-367d-4948-a760-b4ed15e55859" name="No card" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="169ba407-782d-4ea9-a010-d3c5af92d1f2" />
+            <objectFlowTargets>
+              <objectFlow Id="a60bdb2c-a211-4c8a-8083-d89b678c5528" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="c943d7d5-929f-4a5a-877e-6ea108eb53a7" LastKnownName="Sell with price" />
+                <elementDefinition Id="d747b6e7-7f52-458a-a35e-90e979a1cddb" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="026926b4-2370-420b-b7bb-da6b806f9a9e" name="2147483647" value="2147483647">
+                <elementDefinition Id="0cc786d1-5635-4816-a653-e08c4687c0c5" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="1514ad05-d58d-478c-80d7-4e77e92ec0bf" name="ShopNetwork">
+    <elementDefinition Id="aad2585a-a1bb-47ea-9086-5916cb470066" />
+  </package>
+</activityRootModel>
