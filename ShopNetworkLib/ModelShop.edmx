@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelShop.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelShopStoreContainer">
+    <EntitySet Name="Products" EntityType="ModelShop.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Buyers" EntityType="ModelShop.Store.Buyers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cards" EntityType="ModelShop.Store.Cards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sellers" EntityType="ModelShop.Store.Sellers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products_ProdProduct" EntityType="ModelShop.Store.Products_ProdProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products_PromProduct" EntityType="ModelShop.Store.Products_PromProduct" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SellerBuyer" EntityType="ModelShop.Store.SellerBuyer" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="BuyerCard" Association="ModelShop.Store.BuyerCard">
+      <End Role="Buyer" EntitySet="Buyers" />
+      <End Role="Card" EntitySet="Cards" />
+    </AssociationSet>
+    <AssociationSet Name="BuyerProduct" Association="ModelShop.Store.BuyerProduct">
+      <End Role="Buyer" EntitySet="Buyers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SellerBuyer_Seller" Association="ModelShop.Store.FK_SellerBuyer_Seller">
+      <End Role="Seller" EntitySet="Sellers" />
+      <End Role="SellerBuyer" EntitySet="SellerBuyer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SellerBuyer_Buyer" Association="ModelShop.Store.FK_SellerBuyer_Buyer">
+      <End Role="Buyer" EntitySet="Buyers" />
+      <End Role="SellerBuyer" EntitySet="SellerBuyer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdProduct_inherits_Product" Association="ModelShop.Store.FK_ProdProduct_inherits_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="ProdProduct" EntitySet="Products_ProdProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PromProduct_inherits_Product" Association="ModelShop.Store.FK_PromProduct_inherits_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="PromProduct" EntitySet="Products_PromProduct" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="PriceCard" Type="int" Nullable="false" />
+    <Property Name="Buyer_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Buyers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HolderName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Buyer_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sellers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products_ProdProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products_PromProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SellerBuyer">
+    <Key>
+      <PropertyRef Name="Sellers_Id" />
+      <PropertyRef Name="Buyers_Id" />
+    </Key>
+    <Property Name="Sellers_Id" Type="int" Nullable="false" />
+    <Property Name="Buyers_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="BuyerCard">
+    <End Role="Buyer" Type="ModelShop.Store.Buyers" Multiplicity="1" />
+    <End Role="Card" Type="ModelShop.Store.Cards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Buyer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Card">
+        <PropertyRef Name="Buyer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BuyerProduct">
+    <End Role="Buyer" Type="ModelShop.Store.Buyers" Multiplicity="1" />
+    <End Role="Product" Type="ModelShop.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Buyer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Buyer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SellerBuyer_Seller">
+    <End Role="Seller" Type="ModelShop.Store.Sellers" Multiplicity="1" />
+    <End Role="SellerBuyer" Type="ModelShop.Store.SellerBuyer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seller">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SellerBuyer">
+        <PropertyRef Name="Sellers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SellerBuyer_Buyer">
+    <End Role="SellerBuyer" Type="ModelShop.Store.SellerBuyer" Multiplicity="*" />
+    <End Role="Buyer" Type="ModelShop.Store.Buyers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Buyer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SellerBuyer">
+        <PropertyRef Name="Buyers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdProduct_inherits_Product">
+    <End Role="Product" Type="ModelShop.Store.Products" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProdProduct" Type="ModelShop.Store.Products_ProdProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdProduct">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PromProduct_inherits_Product">
+    <End Role="Product" Type="ModelShop.Store.Products" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PromProduct" Type="ModelShop.Store.Products_PromProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PromProduct">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelShop" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelShopContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="ModelShop.Product" />
+          <EntitySet Name="Buyers" EntityType="ModelShop.Buyer" />
+          <EntitySet Name="Cards" EntityType="ModelShop.Card" />
+          <EntitySet Name="Sellers" EntityType="ModelShop.Seller" />
+          <AssociationSet Name="BuyerCard" Association="ModelShop.BuyerCard">
+            <End Role="Buyer" EntitySet="Buyers" />
+            <End Role="Card" EntitySet="Cards" />
+          </AssociationSet>
+          <AssociationSet Name="BuyerProduct" Association="ModelShop.BuyerProduct">
+            <End Role="Buyer" EntitySet="Buyers" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="SellerBuyer" Association="ModelShop.SellerBuyer">
+            <End Role="Seller" EntitySet="Sellers" />
+            <End Role="Buyer" EntitySet="Buyers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="PriceCard" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Buyer" Relationship="ModelShop.BuyerProduct" FromRole="Product" ToRole="Buyer" />
+        </EntityType>
+        <EntityType Name="ProdProduct" BaseType="ModelShop.Product" >
+          <Property Name="ExpireDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PromProduct" BaseType="ModelShop.Product" />
+        <EntityType Name="Buyer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Card" Relationship="ModelShop.BuyerCard" FromRole="Buyer" ToRole="Card" />
+          <NavigationProperty Name="Products" Relationship="ModelShop.BuyerProduct" FromRole="Buyer" ToRole="Product" />
+          <NavigationProperty Name="Sellers" Relationship="ModelShop.SellerBuyer" FromRole="Buyer" ToRole="Seller" />
+        </EntityType>
+        <EntityType Name="Card">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolderName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Buyer" Relationship="ModelShop.BuyerCard" FromRole="Card" ToRole="Buyer" />
+        </EntityType>
+        <EntityType Name="Seller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Buyers" Relationship="ModelShop.SellerBuyer" FromRole="Seller" ToRole="Buyer" />
+        </EntityType>
+        <Association Name="BuyerCard">
+          <End Type="ModelShop.Buyer" Role="Buyer" Multiplicity="1" />
+          <End Type="ModelShop.Card" Role="Card" Multiplicity="0..1" />
+        </Association>
+        <Association Name="BuyerProduct">
+          <End Type="ModelShop.Buyer" Role="Buyer" Multiplicity="1" />
+          <End Type="ModelShop.Product" Role="Product" Multiplicity="*" />
+        </Association>
+        <Association Name="SellerBuyer">
+          <End Type="ModelShop.Seller" Role="Seller" Multiplicity="*" />
+          <End Type="ModelShop.Buyer" Role="Buyer" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelShopStoreContainer" CdmEntityContainer="ModelShopContainer">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.Product)">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceCard" ColumnName="PriceCard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.ProdProduct)">
+        <MappingFragment StoreEntitySet="Products_ProdProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.PromProduct)">
+        <MappingFragment StoreEntitySet="Products_PromProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buyers">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.Buyer)">
+        <MappingFragment StoreEntitySet="Buyers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cards">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.Card)">
+        <MappingFragment StoreEntitySet="Cards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HolderName" ColumnName="HolderName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sellers">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelShop.Seller)">
+        <MappingFragment StoreEntitySet="Sellers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="BuyerCard" TypeName="ModelShop.BuyerCard" StoreEntitySet="Cards">
+      <EndProperty Name="Buyer">
+        <ScalarProperty Name="Id" ColumnName="Buyer_Id" />
+      </EndProperty>
+      <EndProperty Name="Card">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BuyerProduct" TypeName="ModelShop.BuyerProduct" StoreEntitySet="Products">
+      <EndProperty Name="Buyer">
+        <ScalarProperty Name="Id" ColumnName="Buyer_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SellerBuyer" TypeName="ModelShop.SellerBuyer" StoreEntitySet="SellerBuyer">
+      <EndProperty Name="Seller">
+        <ScalarProperty Name="Id" ColumnName="Sellers_Id" />
+      </EndProperty>
+      <EndProperty Name="Buyer">
+        <ScalarProperty Name="Id" ColumnName="Buyers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

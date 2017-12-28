@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="aad2585a-a1bb-47ea-9086-5916cb470066"
   name="ShopNetwork" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2118,6 +2118,1043 @@
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="fcbf4840-3ae9-416f-889f-34d8e5bb1e20"
+        name="ActivityShop"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="927b8079-d962-40f6-8632-d993dffa0eb8"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dba161de-ef46-47f4-a0d6-207fe6d78d29"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7f6b685f-a56f-4030-a05f-8fe3e22603df"
+                  LastKnownName="Buyer takes products"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="7f6b685f-a56f-4030-a05f-8fe3e22603df"
+            name="Buyer takes products"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="4cf5defe-7895-43f3-aadf-793c4efa715e"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="57a1fe0d-f190-43f5-a93b-f7f52bc6ffbe"
+                  LastKnownName="Products"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="57a1fe0d-f190-43f5-a93b-f7f52bc6ffbe"
+            name="Products"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="31b3d654-9f9b-4962-9324-c40e0b636843"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="5ac3c613-072f-4187-ad6c-8077389554da"
+                  LastKnownName="Buyer"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="b6069a1d-4e89-4daf-aa5c-535e56a5bcf8"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="5ac3c613-072f-4187-ad6c-8077389554da"
+            name="Buyer"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="d040df62-747e-409c-9e24-59c00cf4bfdd"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <decisionNodeMoniker
+                  Id="743e2a49-e418-4bbb-8bf7-1c114a08f9cd"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="dc7abdfe-164e-4542-8b8e-a75aff30399a"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <decisionNode
+            Id="743e2a49-e418-4bbb-8bf7-1c114a08f9cd"
+            name="Decision1"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="fff00872-7eeb-4dc4-bf1f-d31b01844d5b"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="7e371385-2c1a-4c78-aea1-9d9ab3838e59"
+                  LastKnownName="Buyer has card"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="566d12f4-a1df-4cbe-9418-97f48a04700a"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="169ba407-782d-4ea9-a010-d3c5af92d1f2"
+                  LastKnownName="No card"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <objectNode
+            Id="5b623fdb-44df-4451-8893-fbc11eeb2088"
+            name="Seller"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="1c5bec69-fd7b-4844-a68f-c9d2d1838b14"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="d7fa2a24-1a9b-421d-b29d-94db0069ae47"
+                  LastKnownName="Sell with card price"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="3ca056c9-0bf7-45e2-b7d0-425f97737d5a"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="bccfa0a1-50d3-4575-b416-7179d6b08e73"
+                  LastKnownName="Sell with price"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="de21fee0-fb6a-4ab4-9cec-07e178f4318e"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="d7fa2a24-1a9b-421d-b29d-94db0069ae47"
+            name="Sell with card price"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5388c50a-ab9c-47cf-b717-7c1b5e223a64"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="ab628d26-a243-480d-a025-ada7d90faa99"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bccfa0a1-50d3-4575-b416-7179d6b08e73"
+            name="Sell with price"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ddb38380-4a41-4989-b820-cfa912334c91"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="ab628d26-a243-480d-a025-ada7d90faa99"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="ab628d26-a243-480d-a025-ada7d90faa99"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <objectNode
+            Id="7e371385-2c1a-4c78-aea1-9d9ab3838e59"
+            name="Buyer has card"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="cfd21671-d30c-4032-9151-6f994f418d6f"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="d7fa2a24-1a9b-421d-b29d-94db0069ae47"
+                  LastKnownName="Sell with card price"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="1b1cbd20-59d1-4aaa-bcf2-db7e6b7ccc86"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="169ba407-782d-4ea9-a010-d3c5af92d1f2"
+            name="No card"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="d747b6e7-7f52-458a-a35e-90e979a1cddb"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="bccfa0a1-50d3-4575-b416-7179d6b08e73"
+                  LastKnownName="Sell with price"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="0cc786d1-5635-4816-a653-e08c4687c0c5"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="139dc41b-6594-46c4-aa66-699f133ad619"
+        name="SequenceShop"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="c8aa360b-96dd-4096-9cbb-a80d7917419d">
+            <body>Buyer has card</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="5a48fd93-2263-4209-a87e-4f0c72bb4748"
+                LastKnownName="BehaviorExecutionSpecification2"
+                LastKnownLocation="ShopNetwork.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="98fe677c-8c8e-4f28-996b-e03e81e4c557">
+            <body>Buer has no card</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="7e221c63-c4ea-48de-82f3-5d4598b43c91"
+                LastKnownName="BehaviorExecutionSpecification3"
+                LastKnownLocation="ShopNetwork.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="e5eb8cdc-4e17-4e97-95dc-5277de09c2a0"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7911fc43-ec19-4cb4-98d9-0cb41973a484"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ShopNetwork.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="852d8a76-a18e-4623-bd2e-c87b8f4e7650"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ShopNetwork.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7acb498b-38f8-4190-bc65-11cba111b79d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="45b82d92-4638-4edf-85ec-41896024d102"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ShopNetwork.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="852d8a76-a18e-4623-bd2e-c87b8f4e7650"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="da9c4eb2-f564-4efb-8655-6205a29f518f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ee37542e-ae94-4269-85a4-6211b037a903"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7acb498b-38f8-4190-bc65-11cba111b79d"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="45b82d92-4638-4edf-85ec-41896024d102"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a3887d16-cb04-428b-b2f8-fd474fed0212"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7911fc43-ec19-4cb4-98d9-0cb41973a484"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f7bef271-664b-4b64-8b70-5883eaa462ee"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="5a48fd93-2263-4209-a87e-4f0c72bb4748"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="34f25add-37c8-45bf-a784-92ea266c0d94"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ShopNetwork.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="deac9266-874a-40aa-8709-6a44972c89f2"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ShopNetwork.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fbcbfa62-c632-4f66-ac4a-d08e579acb17"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6999c23b-61d9-49f8-ab4b-df0a2fa50d76"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ShopNetwork.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="deac9266-874a-40aa-8709-6a44972c89f2"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="00e9a7de-c1ed-4ca9-9c9e-4298178f5d52"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fbcbfa62-c632-4f66-ac4a-d08e579acb17"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8bc086fe-58a4-4748-9ab9-2a1ee4e02eb5"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6999c23b-61d9-49f8-ab4b-df0a2fa50d76"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="84179b45-c652-44c6-b6a0-9959e875f499"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="34f25add-37c8-45bf-a784-92ea266c0d94"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e744642b-7567-4ae1-ab66-99c271a67e41"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="7e221c63-c4ea-48de-82f3-5d4598b43c91"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7cd7152e-f0ec-41fb-a41e-799fa57a5ff9"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ShopNetwork.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5b400b34-c92e-4786-9886-1cf449493044"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ShopNetwork.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="afc22a04-4a40-4b4b-87ab-f290cd7c3aeb"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="54f7bf6c-47c2-4690-a1dd-5b69d9da520a"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ShopNetwork.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5b400b34-c92e-4786-9886-1cf449493044"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="827e10f2-f87b-42dd-8017-7d69b9b9e756"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e3d53144-f392-42d3-98de-5eba0decf091"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="afc22a04-4a40-4b4b-87ab-f290cd7c3aeb"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="54f7bf6c-47c2-4690-a1dd-5b69d9da520a"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="14c7d206-ddec-4431-9285-26a195ad4b23"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7cd7152e-f0ec-41fb-a41e-799fa57a5ff9"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="12147670-b84e-4710-8690-900f88ab15f0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="80d14654-1a7c-46f4-8ef8-91a4da2a7b61"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="06792f0a-8d2f-46d8-a4f7-be9b0804edcc"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ShopNetwork.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="615b777d-ada8-47db-940d-f8f1c1f59fec"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ShopNetwork.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1e604eb-893e-4138-8b8b-9f95d4f76d47"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="29bd364c-f20f-4d2f-ab1d-8c193661b050"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="ShopNetwork.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="615b777d-ada8-47db-940d-f8f1c1f59fec"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b6ae7949-6cea-4eaa-8edf-bc3fc32e5aa5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ad14dcbc-4583-4576-b063-8493cd8c1164"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e1e604eb-893e-4138-8b8b-9f95d4f76d47"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="29bd364c-f20f-4d2f-ab1d-8c193661b050"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e733def0-50dd-4157-b650-b93b901b4f67"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="06792f0a-8d2f-46d8-a4f7-be9b0804edcc"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2137e136-eaa3-4f58-8c80-93e5e3583ce3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ShopNetwork.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="05118c8d-b859-4238-9b60-76c14a3d8884"
+            name="Buyer"
+            isActor="true"
+            lifelineDisplayName="Buyer">
+            <represents>
+              <propertyMoniker
+                Id="244f3dfd-2b78-43c7-b4ef-cf961891a397"
+                LastKnownLocation="ShopNetwork.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ee37542e-ae94-4269-85a4-6211b037a903"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a3887d16-cb04-428b-b2f8-fd474fed0212"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8bc086fe-58a4-4748-9ab9-2a1ee4e02eb5"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="84179b45-c652-44c6-b6a0-9959e875f499"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e3d53144-f392-42d3-98de-5eba0decf091"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="14c7d206-ddec-4431-9285-26a195ad4b23"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ad14dcbc-4583-4576-b063-8493cd8c1164"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="ShopNetwork.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e733def0-50dd-4157-b650-b93b901b4f67"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="ShopNetwork.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="e7cf2795-d958-4ff1-99d4-89b554af7140"
+            name="Seller"
+            isActor="true"
+            lifelineDisplayName="Seller">
+            <represents>
+              <propertyMoniker
+                Id="e33c250e-d474-47ef-bcc7-edb6a4158411"
+                LastKnownLocation="ShopNetwork.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="852d8a76-a18e-4623-bd2e-c87b8f4e7650"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7911fc43-ec19-4cb4-98d9-0cb41973a484"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="deac9266-874a-40aa-8709-6a44972c89f2"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="34f25add-37c8-45bf-a784-92ea266c0d94"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5b400b34-c92e-4786-9886-1cf449493044"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7cd7152e-f0ec-41fb-a41e-799fa57a5ff9"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="615b777d-ada8-47db-940d-f8f1c1f59fec"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ShopNetwork.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="06792f0a-8d2f-46d8-a4f7-be9b0804edcc"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ShopNetwork.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="9c9132c7-453d-4472-9e3b-cbd7bec75d44"
+            name="Products to buy"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ee37542e-ae94-4269-85a4-6211b037a903"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7acb498b-38f8-4190-bc65-11cba111b79d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fbc206c7-32ce-4ac7-8086-896585bfc2aa"
+            name="Buyer has card"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="45b82d92-4638-4edf-85ec-41896024d102"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a3887d16-cb04-428b-b2f8-fd474fed0212"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8ce24104-c121-47c7-9a92-521ccb1f0baa"
+            name="has card"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8bc086fe-58a4-4748-9ab9-2a1ee4e02eb5"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fbcbfa62-c632-4f66-ac4a-d08e579acb17"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7e366902-c181-49f8-829a-025eed0b6288"
+            name="Price with card"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6999c23b-61d9-49f8-ab4b-df0a2fa50d76"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="84179b45-c652-44c6-b6a0-9959e875f499"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="370a0c55-5eec-4810-96dd-6ecdf3d2718d"
+            name="no card"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e3d53144-f392-42d3-98de-5eba0decf091"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="afc22a04-4a40-4b4b-87ab-f290cd7c3aeb"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="743a42e6-66b4-46c1-89a4-97d2fb9e7733"
+            name="Price without card"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="54f7bf6c-47c2-4690-a1dd-5b69d9da520a"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="14c7d206-ddec-4431-9285-26a195ad4b23"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7178c937-39ac-4123-80ec-957e729eb200"
+            name="Payment"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ad14dcbc-4583-4576-b063-8493cd8c1164"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1e604eb-893e-4138-8b8b-9f95d4f76d47"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="829eb8cf-b017-4756-a93b-476a5f2a7cff"
+            name="Giving products"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="29bd364c-f20f-4d2f-ab1d-8c193661b050"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="ShopNetwork.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e733def0-50dd-4157-b650-b93b901b4f67"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="ShopNetwork.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="244f3dfd-2b78-43c7-b4ef-cf961891a397"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="c3793f42-2edd-44f0-8d21-7d86aba88344"
+                LastKnownName="Buyer"
+                LastKnownLocation="ShopNetwork.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e33c250e-d474-47ef-bcc7-edb6a4158411"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="c8fb1a4a-a75e-4ba7-b6f0-7dc14a7d2bdd"
+                LastKnownName="Seller"
+                LastKnownLocation="ShopNetwork.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="da9c4eb2-f564-4efb-8655-6205a29f518f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f7bef271-664b-4b64-8b70-5883eaa462ee"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="00e9a7de-c1ed-4ca9-9c9e-4298178f5d52"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e744642b-7567-4ae1-ab66-99c271a67e41"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="827e10f2-f87b-42dd-8017-7d69b9b9e756"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="12147670-b84e-4710-8690-900f88ab15f0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b6ae7949-6cea-4eaa-8edf-bc3fc32e5aa5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2137e136-eaa3-4f58-8c80-93e5e3583ce3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="e1e63672-ab62-47d5-b115-fe7d5651ace7"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

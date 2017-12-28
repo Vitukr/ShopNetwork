@@ -5,9 +5,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+
 public class ProdProduct : Product
 {
-	public virtual object ExpireDate { get; set; }
+	public virtual DateTime ExpireDate { get; set; }
 
 }
 
